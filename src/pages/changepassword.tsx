@@ -72,44 +72,51 @@ const ChangePasswordPage: React.FC = () => {
     };
 
     return (
-        <div> 
+        <div className="flex">
             <Sidebar/>
-            <h1>Change Password</h1>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Old Password:</label>
-                    <input
-                        type="password"
-                        name="old_password"
-                        value={formData.old_password}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-                <div>
-                    <label>New Password:</label>
-                    <input
-                        type="password"
-                        name="new_password"
-                        value={formData.new_password}
-                        onChange={handleChange}
-                        required
-                    />
-                    {errors.new_password && <p>{errors.new_password}</p>}
-                </div>
-                <div>
-                    <label>Confirm New Password:</label>
-                    <input
-                        type="password"
-                        name="confirm_new_password"
-                        value={formData.confirm_new_password}
-                        onChange={handleChange}
-                        required
-                    />
-                    {errors.confirm_new_password && <p>{errors.confirm_new_password}</p>}
-                </div>
-                <button type="submit">Change Password</button>
-            </form>
+            <div className="flex-1 p-4 ml-64">
+                <h1 className="text-xl font-semibold mb-4">Change Password</h1>
+                <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+                    <div className="flex flex-col">
+                        <label className="mb-1">Old Password:</label>
+                        <input
+                            type="password"
+                            name="old_password"
+                            value={formData.old_password}
+                            onChange={handleChange}
+                            required
+                            className="p-2 border rounded"
+                        />
+                    </div>
+                    <div className="flex flex-col">
+                        <label className="mb-1">New Password:</label>
+                        <input
+                            type="password"
+                            name="new_password"
+                            value={formData.new_password}
+                            onChange={handleChange}
+                            required
+                            className="p-2 border rounded"
+                        />
+                        {errors.new_password && <p className="text-red-500">{errors.new_password}</p>}
+                    </div>
+                    <div className="flex flex-col">
+                        <label className="mb-1">Confirm New Password:</label>
+                        <input
+                            type="password"
+                            name="confirm_new_password"
+                            value={formData.confirm_new_password}
+                            onChange={handleChange}
+                            required
+                            className="p-2 border rounded"
+                        />
+                        {errors.confirm_new_password && <p className="text-red-500">{errors.confirm_new_password}</p>}
+                    </div>
+                    <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">
+                        Change Password
+                    </button>
+                </form>
+            </div>
         </div>
     );
 };
