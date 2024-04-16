@@ -109,7 +109,7 @@ export default function SignUp() {
   className="w-full px-4 py-2 rounded bg-blue-500 text-white font-bold hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
 >
   {isLoading ? (
-    <FontAwesomeIcon icon={faSpinner} spin className="text-blue-500 text-xl" />
+    <FontAwesomeIcon icon={faSpinner} spin className="text-white-500 text-xl" />
   ) : (
     "Sign Up"
   )}

@@ -79,7 +79,7 @@ const NewPost = () => {
             onClick={handleSubmit}
              disabled={isLoading}>
        {isLoading ? (
-    <FontAwesomeIcon icon={faSpinner} spin className="text-blue-500 text-xl" />
+    <FontAwesomeIcon icon={faSpinner} spin className="text-white-500 text-xl" />
   ) : (
     "Submit"
   )}

@@ -117,7 +117,7 @@ return (
   <div className="flex h-screen"> 
   <Sidebar />
   <div className="flex-1 flex items-center justify-center bg-white rounded-lg shadow h-screen">
-    <FontAwesomeIcon icon={faSpinner} spin className="text-blue-500 text-xl" /> {/* Display loading spinner */}
+    <FontAwesomeIcon icon={faSpinner} spin className="text-white-500 text-xl" /> {/* Display loading spinner */}
   </div>
 </div>
 
